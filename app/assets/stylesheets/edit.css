@@ -1,0 +1,22 @@
+
+h4 {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.edit-error {
+	width: 600px;
+	border: solid 3px #e60033;
+}
+
+.edit-main {
+	background-color: #e60033;
+	color: #FFFFFF;
+	font-size: 15px;
+	padding-left: 10px;
+}
+
+.edit-text {
+	padding: 10px;
+	background-color: #f5f5f5;
+	font-size: 15px;
+}

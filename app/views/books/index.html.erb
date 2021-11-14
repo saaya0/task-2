@@ -1,0 +1,52 @@
+	<h1>Books</h1>
+		<table>
+			<thead>
+				<tr>
+					<th crass=tiale>Title</th>
+					<th  colspan=2.5 crass=body>Body</th>
+					<th class=space colspan="3">
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @books.each do |book| %>
+					<tr>
+						<td colspan=1><%= book.title %></td>
+						<td colspan=3><%= book.body %></td>
+						<td>
+							<%= link_to 'Show', book_path(book) %>
+							<%= link_to 'Edit', edit_book_path(book) %>
+							<%= link_to "Destroy", book_path(book),method: :delete %>
+						</td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>
+		<div class="footer">
+			<div class="footer-name">New book</div>
+
+			<% if @book.errors.any? %>
+			  <div class = "footer-error">
+					<div class = "footer-main"><%= @book.errors.count %>error prohibited this book from being saved:</div>
+				  <div class = "footer-text">
+				  ・<% @book.errors.full_messages.each do |message| %>
+				    <%= message %>
+				  <% end %>
+				  </div>
+				</div>
+			<% end %>
+
+			<%= form_with model:@book, url:'/books', local:true do |f| %>
+				<div class="field">
+					<div class="footer-content">Title</div>
+		  		<%= f.text_field :title %>
+		  		</div>
+		  		<div class="field">
+						<div class="footer-content">Body</div>
+						<%= f.text_area :body %>
+					</div>
+					<div class="actions">
+				  <%= f.submit 'Create Book' %>
+					</div>
+				</div>
+			<% end %>

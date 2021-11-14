@@ -1,0 +1,85 @@
+// Place all the styles related to the books controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+* {
+	margin: 0;
+	paddig: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding-left: 30px;
+}
+
+
+header {
+	padding-top: 15px;
+	font-weight: bold;
+	padding-bottom: 15px;
+}
+
+
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+}
+
+th {
+	font-size: 15px;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+    padding-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+
+table{
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  width: 70%;
+}
+
+
+
+
+
+.footer{
+	display: block;
+}
+
+.footer-name {
+	font-size: 20px;
+	padding-top: 20px;
+	font-weight: bold;
+
+}
+
+.footer-content {
+	font-size: 13px;
+	padding-top: 10px;
+}
+
+.footer-error {
+	width: 600px;
+	border: solid 3px #e60033;
+}
+
+.footer-main {
+	background-color: #e60033;
+	color: #FFFFFF;
+	font-size: 15px;
+	padding-left: 10px;
+}
+
+.footer-text {
+	padding: 10px;
+	background-color: #f5f5f5;
+	font-size: 15px;
+}
